@@ -22,6 +22,7 @@ public class DemoApplication {
     }
 
     //然后每隔1分钟执行一次
+    //最新部分
     @Scheduled(cron="0/1 * *  * * ? ")
     public void testKafka() throws Exception {
         JSONObject user = new JSONObject();
