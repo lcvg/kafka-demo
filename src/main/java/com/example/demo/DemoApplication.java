@@ -21,7 +21,7 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    //然后每隔1分钟执行一次
+    //然后每隔1分钟执行一次 -- 合并测试
     @Scheduled(cron="0/1 * *  * * ? ")
     public void testKafka() throws Exception {
         JSONObject user = new JSONObject();

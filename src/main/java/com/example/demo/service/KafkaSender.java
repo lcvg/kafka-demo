@@ -35,6 +35,7 @@ public class KafkaSender<T> {
         String jsonObj = JSON.toJSONString(obj);
         logger.info("------------ message = {}", jsonObj);
 
+
         //发送消息
         ListenableFuture<SendResult<String, Object>> future = kafkaTemplate.send("kafka.tut", jsonObj);
         future.addCallback(new ListenableFutureCallback<SendResult<String, Object>>() {
